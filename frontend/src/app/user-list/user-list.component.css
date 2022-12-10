@@ -1,0 +1,28 @@
+button {
+	width: 200px;
+	margin: 0 auto;
+	background-color: #890e54;
+	border-radius: 3px;
+	border: solid #890e54 3px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+button a{
+	color: white;
+	text-decoration: none;
+}
+
+#edit {
+	background-color: #80a9be;
+	color: black;
+	width: 100px;
+	border: solid black 1px;
+	margin-right: 10px;
+}
+
+#remove {
+	background-color: red;
+	color: black;
+	width: 100px;
+	border: solid black 1px;
+}

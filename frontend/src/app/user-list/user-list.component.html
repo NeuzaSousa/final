@@ -1,23 +1,24 @@
 <div class="card my-5">
 	<h2>User List</h2>
+	<button><a routerLink="/adduser">Add an user</a></button>
 	<div class="card-body">
 		<table class="table table-bordered table-striped">
 			<thead class="thead-dark">
 				<tr>
-					<th scope="col">#</th>
+					<th scope="col">Type user</th>
 					<th scope="col">Name</th>
 					<th scope="col">First Name</th>
-					<th scope="col">Type User</th>
 					<th scope="col">Email</th>
+					<th scope="col"></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr *ngFor="let user of users">
-					<td>{{ user.id }}</td>
+					<td>{{ user.typeuser }}</td>
 					<td>{{ user.name }}</td>
 					<td>{{ user.firstname }}</td>
-					<td>{{ user.typeuser }}</td>
 					<td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+					<td><button id="edit">Edit</button><button id="remove">Remove</button></td>
 				</tr>
 			</tbody>
 		</table>

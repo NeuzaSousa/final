@@ -25,7 +25,10 @@ li a {
 	font-size: 15px;
 	padding: 10px 20px;
 	text-decoration: none;
-	magin-top: 0;
+}
+
+li a:active {
+	border-top: solid #890e54 3px;
 }
 
 .HN {

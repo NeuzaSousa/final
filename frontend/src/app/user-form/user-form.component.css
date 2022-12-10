@@ -1,6 +1,6 @@
 input {
 	border: solid #890e54ff 3px;
-	width: 200px;
+	width: 300px;
 	text-align: center;
 	display: block;
 	margin: 20px auto;
@@ -13,7 +13,7 @@ input {
 }
 
 button {
-	width: 200px;
+	width: 300px;
 	background-color: #890e54ff;
 	border-radius: 3px;
 	color: white;
