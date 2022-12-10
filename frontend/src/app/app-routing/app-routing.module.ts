@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-	{ path: 'users', component: UserListComponent },
+	{ path: 'userlist', component: UserListComponent },
 	{ path: 'adduser', component: UserFormComponent }
 ];
 

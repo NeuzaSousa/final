@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+h2 {
+	text-align: center;
+	background-color: #708090ff;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-bottom: 10px;
+  background-color: #80a9be;
+}
+
+li {
+	display: inline;
+	color: #890e54;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+li a {
+	color: black;
+	font-size: 15px;
+	padding: 10px 20px;
+	text-decoration: none;
+	magin-top: 0;
+}
+
+.HN {
+	margin-right: 20px;
+}
