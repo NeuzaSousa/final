@@ -39,7 +39,6 @@ public class MainController {
 	@DeleteMapping("/users/{id}")
 	public void deleteUser(@PathVariable int id) {
 		userRepository.deleteById(id);
-		//getAllUsers();
 	}
 	
 	@PostMapping("/types")
@@ -50,5 +49,15 @@ public class MainController {
 	@GetMapping("/types")
 	public @ResponseBody Iterable<Type> getAllTypes() {
 		return typeRepository.findAll();
+	}
+	
+	@GetMapping("/types/{id}")
+	public @ResponseBody Optional<Type> getTypeById(@PathVariable int id){
+		return typeRepository.findById(id);
+	}
+	
+	@DeleteMapping("/types/{id}")
+	public void deleteType(@PathVariable int id) {
+		typeRepository.deleteById(id);
 	}
 }
