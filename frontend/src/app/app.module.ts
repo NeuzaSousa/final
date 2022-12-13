@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { TypeListComponent } from './type-list/type-list.component';
+import { TypeFormComponent } from './type-form/type-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserFormComponent,
-    TypeListComponent
+    TypeListComponent,
+    TypeFormComponent
   ],
   imports: [
     BrowserModule,

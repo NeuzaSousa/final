@@ -1,0 +1,14 @@
+<div>
+	<h2>Add / Edit a type</h2>
+	<div>
+		<form (ngSubmit)="onSubmit()" #typeForm="ngForm">
+			<div class="form-group">
+				<input type="text" [(ngModel)]="type.name"
+					class="form-control" id="name" name="name" placeholder="Type User"
+					required #name="ngModel">
+			<!-- <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div> -->
+			</div>
+			<button type="submit" [disabled]="!typeForm.form.valid">Create</button>
+		</form>
+	</div>
+</div>

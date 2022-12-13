@@ -1,6 +1,6 @@
 <div>
 	<h2>Type List</h2>
-	<!--  <button><a routerLink="">Add a type</a></button> -->
+	<button><a routerLink="/addtype">Add a type</a></button>
 	<div class="card-body">
 		<table class="table table-bordered table-striped">
 			<thead class="thead-dark">
@@ -12,7 +12,7 @@
 			<tbody>
 				<tr *ngFor="let type of types">
 					<td>{{ type.id }}</td>
-					<td>{{ type.type }}</td>
+					<td>{{ type.name }}</td>
 					<td><button id="edit">Edit</button><button id="remove">Remove</button></td>
 				</tr>
 			</tbody>

@@ -12,7 +12,7 @@ public class Type {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	int id;
-	String type;
+	String name;
 	
 	public int getId() {
 		return id;
@@ -20,10 +20,10 @@ public class Type {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getType() {
-		return type;
+	public String getName() {
+		return name;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setName(String name) {
+		this.name = name;
 	}
 }
