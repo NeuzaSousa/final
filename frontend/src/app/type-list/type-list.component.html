@@ -1,0 +1,22 @@
+<div>
+	<h2>Type List</h2>
+	<!--  <button><a routerLink="">Add a type</a></button> -->
+	<div class="card-body">
+		<table class="table table-bordered table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Type</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let type of types">
+					<td>{{ type.id }}</td>
+					<td>{{ type.type }}</td>
+					<td><button id="edit">Edit</button><button id="remove">Remove</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
