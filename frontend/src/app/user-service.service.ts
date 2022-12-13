@@ -15,8 +15,12 @@ export class UserServiceService {
 	public findAll(): Observable<User[]> {
 		return this.http.get<User[]>(this.usersUrl);
 	}
-	
+		
 	public save(user: User) {
 		return this.http.post<User>(this.usersUrl, user, {responseType: 'text' as 'json'});
+	}
+	
+	public deleteUser(id:any) {
+		return this.http.delete<User>(`${this.usersUrl}/${id}`)
 	}
 }
