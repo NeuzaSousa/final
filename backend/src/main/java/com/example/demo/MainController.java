@@ -14,6 +14,9 @@ public class MainController {
 	@Autowired
 	private UserRepository userRepository;
 	
+	@Autowired
+	private TypeRepository typeRepository;
+	
 	@PostMapping("/users")
 	void addUser(@RequestBody User user) {
 		userRepository.save(user);
@@ -23,5 +26,14 @@ public class MainController {
 	public @ResponseBody Iterable<User> getAllUsers() {
 		return userRepository.findAll();
 	}
-
+	
+	@PostMapping("/types")
+	void addType(@RequestBody Type type) {
+		typeRepository.save(type);
+	}
+	
+	@GetMapping("/types")
+	public @ResponseBody Iterable<Type> getAllTypes() {
+		return typeRepository.findAll();
+	}
 }

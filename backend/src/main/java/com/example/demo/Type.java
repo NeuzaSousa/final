@@ -1,5 +1,4 @@
 package com.example.demo;
-/*package com.example.demo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,12 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name="TypeUser")
-public class TypeUser {
+@Table (name="Type")
+public class Type {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	int id;
-	String typeuser;
+	String type;
 	
 	public int getId() {
 		return id;
@@ -21,10 +20,10 @@ public class TypeUser {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getTypeuser() {
-		return typeuser;
+	public String getType() {
+		return type;
 	}
-	public void setTypeuser(String typeuser) {
-		this.typeuser = typeuser;
+	public void setType(String type) {
+		this.type = type;
 	}
-}*/
+}
