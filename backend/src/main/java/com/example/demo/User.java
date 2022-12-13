@@ -16,13 +16,13 @@ public class User {
 	String name;
 	String firstname;
 	String email;
-	String typeuser;
+	String type;
 	
-	public String getTypeuser() {
-		return typeuser;
+	public String getType() {
+		return type;
 	}
-	public void setTypeuser(String typeuser) {
-		this.typeuser = typeuser;
+	public void setTypeuser(String type) {
+		this.type = type;
 	}
 	public int getId() {
 		return id;

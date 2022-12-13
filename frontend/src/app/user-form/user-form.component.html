@@ -20,8 +20,8 @@
 				<!-- <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div> -->
 			</div>
 			<div class="form-group">
-				<input type="text" [(ngModel)]="user.typeuser" class="form-control" id="typeuser" name="typeuser" placeholder="Type user"
-					required #typeuser="ngModel">
+				<input type="text" [(ngModel)]="user.type" class="form-control" id="type" name="type" placeholder="Type user"
+					required #type="ngModel">
 				<!-- <div [hidden]="!typeuser.pristine" class="alert alert-danger">Type of user is required</div> -->
 			</div>
 			<button type="submit" [disabled]="!userForm.form.valid">Create</button>
