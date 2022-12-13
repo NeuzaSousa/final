@@ -11,6 +11,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { TypeListComponent } from './type-list/type-list.component';
 import { TypeFormComponent } from './type-form/type-form.component';
+import { SortDirective } from '../app/directive/sort.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TypeFormComponent } from './type-form/type-form.component';
     UserListComponent,
     UserFormComponent,
     TypeListComponent,
-    TypeFormComponent
+    TypeFormComponent,
+    SortDirective
   ],
   imports: [
     BrowserModule,

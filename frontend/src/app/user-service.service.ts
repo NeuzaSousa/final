@@ -23,4 +23,9 @@ export class UserServiceService {
 	public deleteUser(id:any) {
 		return this.http.delete<User>(`${this.usersUrl}/${id}`)
 	}
+	
+	public updateUser(user:User) {
+		//user-form(user);
+		//console.log(user);
+	}
 }

@@ -1,4 +1,4 @@
-import { UserServiceService }from './../user-service.service';
+import { UserServiceService } from './../user-service.service';
 import { User } from './../user';
 import { Component, OnInit } from '@angular/core';
 
@@ -28,5 +28,10 @@ export class UserListComponent implements OnInit {
 		this.userService.findAll().subscribe(data => {
 			this.users = data;
 		})	
+	}
+	
+	updateUser(index: number) {
+		this.userService.updateUser(this.users[index]);
+		//console.log(this.users[index]);
 	}
 }
