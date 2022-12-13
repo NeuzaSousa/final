@@ -8,13 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./type-list.component.css']
 })
 export class TypeListComponent {
-	types?: Type[];
+	types: Type[];
 	
-	constructor(private typeService: TypeServiceService) { }
+	constructor(private typeService: TypeServiceService) {
+		this.types = [];
+	}
 
 	ngOnInit() {
 		this.typeService.findAll().subscribe(data => {
 			this.types = data;
 		})
 	}
+	
+	deleteType(id:any, index: number){
+		this.typeService.deleteType(id).subscribe(response => {
+			this.types.splice(index, 1);
+		})
+		this.typeService.findAll().subscribe(data => {
+			this.types = data;
+		})	
+	}
+
 }

@@ -18,4 +18,8 @@ export class TypeServiceService {
 	public save(type:Type) {
 		return this.http.post<Type>(this.typesUrl, type, {responseType: 'text' as 'json'});
 	}
+	
+	public deleteType(id:any) {
+		return this.http.delete<Type>(`${this.typesUrl}/${id}`)
+	}
 }

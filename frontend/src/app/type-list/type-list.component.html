@@ -10,10 +10,10 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr *ngFor="let type of types">
+				<tr *ngFor="let type of types; let i=index;">
 					<td>{{ type.id }}</td>
 					<td>{{ type.name }}</td>
-					<td><button id="edit">Edit</button><button id="remove">Remove</button></td>
+					<td><button id="edit">Edit</button><button id="remove" (click)="deleteType(type.id, i)">Remove</button></td>
 				</tr>
 			</tbody>
 		</table>
