@@ -3,11 +3,13 @@ package com.example.demo;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,6 +38,19 @@ public class MainController {
 		return userRepository.findById(id);
 	}
 	
+	@PutMapping("/users/{id}")
+	public ResponseEntity<User> updateUser(@PathVariable int id, @RequestBody User user) {
+		User updateUser = userRepository.findById(id).orElseThrow();;
+		
+		updateUser.setName(user.getName());
+		updateUser.setFirstname(user.getFirstname());
+		updateUser.setEmail(user.getEmail());
+		
+		userRepository.save(updateUser);
+		
+		return ResponseEntity.ok(updateUser);
+	}
+	
 	@DeleteMapping("/users/{id}")
 	public void deleteUser(@PathVariable int id) {
 		userRepository.deleteById(id);
@@ -55,6 +70,7 @@ public class MainController {
 	public @ResponseBody Optional<Type> getTypeById(@PathVariable int id){
 		return typeRepository.findById(id);
 	}
+	
 	
 	@DeleteMapping("/types/{id}")
 	public void deleteType(@PathVariable int id) {
