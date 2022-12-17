@@ -1,4 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+	background-color: #F1F1F1;
+}
+
 h2 {
 	text-align: center;
 	background-color: #708090ff;
@@ -33,4 +38,26 @@ li a:active {
 
 .HN {
 	margin-right: 20px;
+}
+
+.edit {
+	background-color: #80a9be;
+	color: black;
+	width: 100px;
+	border: solid black 1px;
+	margin-right: 10px;
+	border-radius: 3px;
+}
+
+
+.remove {
+	background-color: red;
+	color: black;
+	width: 100px;
+	border: solid black 1px;
+	border-radius: 3px;
+}
+
+.triangle {
+	color: #80a9be;
 }

@@ -1,13 +1,14 @@
 import { Directive, Input, ElementRef, Renderer2, HostListener } from '@angular/core';
 import { Sort } from '../util/sort';
 import { User } from '../../app/user';
+import { Type } from '../../app/type';
 
 @Directive({
   selector: '[appSort]'
 })
 export class SortDirective {
 
-	@Input() appSort: User[];
+	@Input() appSort: User[] | Type[];
   	constructor(private rendered:Renderer2, private targetElem: ElementRef) {
 		this.appSort = []
 	}

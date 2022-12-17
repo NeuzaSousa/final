@@ -1,19 +1,20 @@
 <div>
-	<h2>Type List</h2>
-	<button><a routerLink="/addtype">Add a type</a></button>
+	<h2>Type User List</h2>
+	<button id="type"><a routerLink="/addtype">Add a type user</a></button>
 	<div class="card-body">
-		<table class="table table-bordered table-striped">
+		<table class="table table-bordered">
 			<thead class="thead-dark">
 				<tr>
-					<th scope="col">#</th>
-					<th scope="col">Type</th>
+					<th scope="col" [appSort]="types" data-order="desc" data-name="id"><span class="triangle">&#9650;</span>&#12644;&#12644;Id&#12644;&#12644;<span class="triangle">&#9660;</span></th>
+					<th scope="col" [appSort]="types" data-order="desc" data-name="name">Type User</th>
+					<th>&#12644;</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr *ngFor="let type of types; let i=index;">
 					<td>{{ type.id }}</td>
 					<td>{{ type.name }}</td>
-					<td><button id="edit">Edit</button><button id="remove" (click)="deleteType(type.id, i)">Remove</button></td>
+					<td><button class="edit">Edit</button><button class="remove" (click)="deleteType(type.id, i)">Remove</button></td>
 				</tr>
 			</tbody>
 		</table>
