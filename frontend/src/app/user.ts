@@ -1,8 +1,8 @@
 export class User {
-	id?: string;
+	userId?: string;
 	name?: string;
 	firstname?: string;
 	email?: string;
-	type?: string;
+	typeUser?: string;
 	
 }
