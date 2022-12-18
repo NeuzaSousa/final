@@ -6,7 +6,7 @@
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th scope="col" [appSort]="users" data-order="desc" data-name="type"><span class="triangle">&#9660;</span> Type user <span class="triangle">&#9650;</span></th>
+					<th scope="col" [appSort]="users" data-order="desc" data-name="typeUser"><span class="triangle">&#9660;</span> Type user <span class="triangle">&#9650;</span></th>
 					<th scope="col" [appSort]="users" data-order="desc" data-name="name">Name</th>
 					<th scope="col" [appSort]="users" data-order="desc" data-name="firstname">First Name</th>
 					<th scope="col" [appSort]="users" data-order="desc" data-name="email">Email</th>
@@ -15,11 +15,11 @@
 			</thead>
 			<tbody>
 				<tr *ngFor="let user of users; let i=index;">
-					<td>{{ user.type }}</td>
+					<td>{{ user.typeUser }}</td>
 					<td>{{ user.name }}</td>
 					<td>{{ user.firstname }}</td>
 					<td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
-					<td><button class="edit" (click)="updateUser(i)">Edit</button><button class="remove" (click)="deleteUser(user.id, i)">Remove</button></td>
+					<td><button class="edit" (click)="updateUser(i)">Edit</button><button class="remove" (click)="deleteUser(user.userId, i)">Remove</button></td>
 				</tr>
 			</tbody>
 		</table>

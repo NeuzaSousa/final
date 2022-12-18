@@ -45,7 +45,7 @@ public class MainController {
 		updateUser.setName(user.getName());
 		updateUser.setFirstname(user.getFirstname());
 		updateUser.setEmail(user.getEmail());
-		updateUser.setTypeuser(user.getType());
+		updateUser.setTypeuser(user.getTypeUser());
 		
 		userRepository.save(updateUser);
 		
