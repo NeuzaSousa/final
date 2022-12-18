@@ -45,6 +45,7 @@ public class MainController {
 		updateUser.setName(user.getName());
 		updateUser.setFirstname(user.getFirstname());
 		updateUser.setEmail(user.getEmail());
+		updateUser.setTypeuser(user.getType());
 		
 		userRepository.save(updateUser);
 		
@@ -71,6 +72,17 @@ public class MainController {
 		return typeRepository.findById(id);
 	}
 	
+	@PutMapping("/types/{id}")
+	public ResponseEntity<Type> updateType(@PathVariable int id, @RequestBody Type type) {
+		Type updateType = typeRepository.findById(id).orElseThrow();;
+		
+		updateType.setName(type.getName());
+		
+		typeRepository.save(updateType);
+		
+		return ResponseEntity.ok(updateType);
+	}
+
 	
 	@DeleteMapping("/types/{id}")
 	public void deleteType(@PathVariable int id) {
