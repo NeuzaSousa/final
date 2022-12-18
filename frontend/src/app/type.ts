@@ -1,4 +1,4 @@
 export class Type {
-	type_id?: string;
+	typeId?: string;
 	name?: string;
 }
